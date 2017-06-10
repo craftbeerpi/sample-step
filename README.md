@@ -65,14 +65,20 @@ The follwoing properties are supported
 ```
 # Will create a text field for the step configuraiton
 t1 = Property.Number("Temperature", configurable=True)
+
 # Will create a number field for the step configuraiton
 n1 = Property.Number("Timer in Minutes", configurable=True)
+
 # Will create a dropdown field for the step configuraiton.
 s1 = Property.Select("My Select Field", [1,2,3])
+
 # Will create a kettle dropdwon field for the step configuraiton. 
 kettle = StepProperty.Kettle("Kettle")
+
 # Will create a sensor dropdwon field for the step configuraiton. 
 sensor = StepProperty.Sensor("Sensor")
+
 # Will create a actor dropdwon field for the step configuraiton. 
 actor = StepProperty.Actor("Actor")
+
 ```
