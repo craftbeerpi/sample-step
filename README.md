@@ -1,5 +1,4 @@
-# sample-step
-CraftBeerPi3.0 Custom Brew Step example
+# CraftBeerPi3.0 Custom Brew Step example
 
 ```
 from modules.core.props import Property, StepProperty
@@ -57,4 +56,17 @@ class MyMashStep(StepBase):
         if self.is_timer_finished() == True:
             self.next()
 
+```
+
+## Properties 
+
+The follwoing properties are supported
+
+```
+t1 = Property.Number("Temperature", configurable=True)
+n1 = Property.Number("Timer in Minutes", configurable=True)
+s1 = Property.Select("My Select Field", [1,2,3])
+kettle = StepProperty.Kettle("Kettle")
+sensor = StepProperty.Sensor("Sensor")
+actor = StepProperty.Sensor("Actor")
 ```
