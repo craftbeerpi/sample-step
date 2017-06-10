@@ -1,15 +1,15 @@
 # sample-step
 CraftBeerPi3.0 Custom Brew Step example
 
-
+```
 from modules.core.props import Property, StepProperty
 from modules.core.step import StepBase
 from modules import cbpi
 
 @cbpi.step
-class MashStep(StepBase):
+class MyMashStep(StepBase):
     '''
-    Just put the decorator @cbpi.step on top of a method
+    Just put the decorator @cbpi.step on top of a method. The class name must be unique in the system
     '''
     # Properties
     temp = Property.Number("Temperature", configurable=True)
@@ -56,3 +56,5 @@ class MashStep(StepBase):
         # Check if timer finished and go to next step
         if self.is_timer_finished() == True:
             self.next()
+
+```
